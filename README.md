@@ -34,12 +34,9 @@ Edge tunnel 的服务使用了 [Deno deploy](https://deno.com/deploy).
 
 ~~[Deno deploy Install](./doc/edge-tunnel-deno.md)~~
 
-## V2ray Edge server --- Cloudflare Worker （敬请期待）
+## V2ray Edge server --- Cloudflare Worker
 
-这个需要等 Cloudflare 发布下面的技术。
-https://blog.cloudflare.com/introducing-socket-workers/
-
-> Cloudflare 大气的免费政策，外加 优选 IP。使得 部署 V2ray 变得无比简单。
+参考这份[图文教程](https://www.igfw.net/archives/14264)，但是需要 fork 本项目。
 
 > 这个不是利用 Worker 进行反代， 而是直接部署 V2ray （js 版本）到 Worker 上。
 
@@ -146,6 +143,4 @@ VMESS 协议过于复杂，并且所有 edge 平台都支持 HTTPS， 所以无�
 
 # 反馈与交流
 
-如果有问题，请使用 https://t.me/edgetunnel 进行交流。
-
-triiger build
+如果有问题，请使用 https://t.me/+QP9HBh7W3sF0Iow4 进行交流。
