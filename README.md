@@ -1,46 +1,21 @@
-# V2ray Edge（Beta）
-
-> 由于 deno deploy 的限制，免费用户目前无法部署。
-> 貌似 Render 封号。
-
-> Due to restrictions of deno deploy, free users can't deploy currently. Please check the Telegram group for more information.
-> https://deno.com/deploy/docs/pricing-and-limits#tls-proxying
-
-> Seems Render also banned this project..
+# V2ray Edge
 
 众所周知，V2ray 是基于 `go` 的，导致原版 V2ray 无法部署到基于 `javaScript (V8)` 的平台上。
 
 本项目通过，使用 `js` 实现 `VLESS`协议， 使得 **V2ray** 可以部署到一些 Edge 或者 Serverless 平台上。
 
-> For international user, I write this readme in Chinese. But I understand English pretty well, if you has any issue, please open it in Github.
+## Deno 部署
 
-> 本项目纯属技术性验证，探索最新的 web standard。请勿乱用，不给予任何保证。
+由于 deno deploy 的[限制](https://deno.com/deploy/docs/pricing-and-limits#tls-proxying)，免费用户目前无法部署。
+[Deno deploy Install](./doc/edge-tunnel-deno.md)
 
-## ~~V2ray Edge server --- Deno deploy~~
-
-> 由于 deno deploy 的限制，免费用户目前无法部署。
-> https://deno.com/deploy/docs/pricing-and-limits#tls-proxying
-
-Edge tunnel 的服务使用了 [Deno deploy](https://deno.com/deploy).
-
-### 风险提示
-
-`Deno deploy` 采用 [fair use policy](https://deno.com/deploy/docs/fair-use-policy), 翻译成中文就是`看良心使用`。 违反可能会封号。
-按照我的理解，本项目应该是违反 fair use policy。请大家**酌情使用**。
-
-### 如何部署服务
-
-~~请查看下面教程。~~
-
-~~[Deno deploy Install](./doc/edge-tunnel-deno.md)~~
-
-## V2ray Edge server --- Cloudflare Worker
+## Cloudflare Worker 部署
 
 参考这份[图文教程](https://www.igfw.net/archives/14264)，但是需要 fork 本项目。
 
 > 这个不是利用 Worker 进行反代， 而是直接部署 V2ray （js 版本）到 Worker 上。
 
-## V2ray Edge server --- Node.js
+## Node.js 平台或 VPS 部署
 
 很多 Node.js 的平台都是支持 docker 的，所以可以直接部署原版。但是既然很多人要，我就写一个。我目前仅仅维护 render 平台的文档。理论上其他平台都一样。
 
