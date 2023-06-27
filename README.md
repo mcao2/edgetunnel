@@ -73,11 +73,12 @@ https://github.com/2dust/v2rayN
 v2rayNG 设置。
 ![andriod-v2ray](./doc/andriod_v2rayn.jpg)
 
-### IOS
+### iOS
 
-> 需要美国区账户
+> 需要非中国区 Apple ID
 
-[shadowrocket](https://apps.apple.com/us/app/shadowrocket/id932747118)
+* [Shadowrocket](https://apps.apple.com/us/app/shadowrocket/id932747118)
+* [V2Box](https://apps.apple.com/us/app/v2box-v2ray-client/id6446814690)
 
 ## 建立 cloudflare worker 反代 （可选）
 
