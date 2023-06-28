@@ -4,6 +4,7 @@ import {
   vlessJs,
 } from 'vless-js';
 import { connect } from 'cloudflare:sockets';
+import { index401 } from './util';
 
 interface Env {
   KV: KVNamespace;
@@ -21,8 +22,11 @@ export const onRequest: PagesFunction<Env> = async (context) => {
 
   const upgradeHeader = context.request.headers.get('Upgrade');
   if (!upgradeHeader || upgradeHeader !== 'websocket') {
-    return new Response(`Expected Upgrade: websocket`, {
-      status: 404,
+    return new Response(index401, {
+      status: 401,
+      headers: {
+        'content-type': 'text/html; charset=utf-8',
+      },
     });
   }
 
